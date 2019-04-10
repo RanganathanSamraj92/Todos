@@ -2,7 +2,7 @@
     "name": "mybaseapptodos",
     "description": "a really cool app",
     "version": "0.0.1",
-    "main": "app.js",
+    "main": "./app.js",
     "author": {
         "name": "Ranganathan"
     },
@@ -11,7 +11,7 @@
         "http-errors": "^1.7.2"
     },
     "scripts": {
-        "prestart": "next build",
-  "start": "node app.js"
+        "start": "node app.js",
+  "build": "webpack"
     }
 }
