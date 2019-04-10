@@ -4,8 +4,10 @@ var path = require('path');
 //var createError = require('http-errors');
 var indexRouter = require('./routes/index');
 var app = express();
-const port = 4000;
-var server = app.listen(port, function() {
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+
+var server = app.listen(port,host, function() {
 	console.log(`Example app listening on port ${port}!`);
 });
 
