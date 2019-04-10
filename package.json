@@ -2,7 +2,7 @@
     "name": "mybaseapptodos",
     "description": "a really cool app",
     "version": "0.0.1",
-    "main": "index.js",
+    "main": "app.js",
     "author": {
         "name": "Ranganathan"
     },
