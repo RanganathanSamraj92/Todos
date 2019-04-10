@@ -2,11 +2,15 @@
     "name": "mybaseapptodos",
     "description": "a really cool app",
     "version": "0.0.1",
-    "main":"index.js",
-    "author": {"name": "Ranganathan"},
-    
-    "dependencies": {"express":"4.16.0"},
-    "scripts":{
+    "main": "index.js",
+    "author": {
+        "name": "Ranganathan"
+    },
+    "dependencies": {
+        "express": "4.16.0",
+        "http-errors": "^1.7.2"
+    },
+    "scripts": {
         "start": "node app.js"
     }
 }
