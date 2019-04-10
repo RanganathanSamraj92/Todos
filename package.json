@@ -12,6 +12,7 @@
     },
     "scripts": {
         "start": "node app.js",
-  "build": "webpack"
+        "dev": "next",
+    "install": "next build"
     }
 }
