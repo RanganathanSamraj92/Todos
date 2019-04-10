@@ -11,6 +11,7 @@
         "http-errors": "^1.7.2"
     },
     "scripts": {
-        "start": "node app.js"
+        "prestart": "next build",
+  "start": "next start -p ${PORT}"
     }
 }
