@@ -12,6 +12,6 @@
     },
     "scripts": {
         "prestart": "next build",
-  "start": "next start -p ${PORT}"
+  "start": "node app.js"
     }
 }
