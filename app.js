@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var path = require('path');
-//var createError = require('http-errors');
+var createError = require('http-errors');
 var indexRouter = require('./routes/index');
 var app = express();
 const host = '0.0.0.0';
@@ -19,10 +19,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 
-// catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//     next(createError(404));
-// });
+//catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    next(createError(404));
+});
 // error handler
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
