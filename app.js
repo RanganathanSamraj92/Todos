@@ -16,7 +16,7 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/', indexRouter);
+app.use('/app', indexRouter);
 
 
 //catch 404 and forward to error handler
@@ -35,7 +35,7 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.use(function(req, res, next) {
+app.use('/',function(req, res, next) {
 	console.log('Time:', Date.now());
 	next();
 });
