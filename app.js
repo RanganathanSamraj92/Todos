@@ -26,7 +26,8 @@ app.use(function(req, res, next) {
 // error handler
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
-    res.locals.message = err.message +' sorry we are not find any path you specified!';
+    res.locals.message = err.message +' !';    
+    res.locals.description = err.description +' sorry we are not find any path you specified..';
     res.locals.error = req.app.get('env') === 'development' ? err : {};
   
     // render the error page
