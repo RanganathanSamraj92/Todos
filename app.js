@@ -3,6 +3,7 @@ var router = express.Router()
 var path = require('path');
 var createError = require('http-errors');
 var indexRouter = require('./routes/index');
+var standardFormatRouter = require('./routes/api_format');
 var app = express();
 const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/app', indexRouter);
+app.use('/api', standardFormatRouter);
 
 
 //catch 404 and forward to error handler
@@ -27,7 +29,7 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message +' !';    
-    res.locals.description = err.description +' sorry we are not find any path you specified..';
+    res.locals.description = 'sorry we are not find any path you specified..';
     res.locals.error = req.app.get('env') === 'development' ? err : {};
   
     // render the error page
