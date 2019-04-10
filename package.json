@@ -4,9 +4,7 @@
     "version": "0.0.1",
     "main":"index.js",
     "author": {"name": "Ranganathan"},
-    "scripts": {
-        "test": "error \"no errors\" & exit 1"
-    },
+    
     "dependencies": {"express":"4.16.0"},
     "scripts":{
         "start": "node app.js"
